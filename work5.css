@@ -1,0 +1,175 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('bg4.jpg');
+    background-size: cover; /* 추가: 배경 이미지를 창 사이즈에 맞게 확대 또는 축소 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    min-height: 100vh; /* body의 최소 높이를 화면의 높이와 같게 설정 */
+}
+
+canvas {
+    display: block;
+  }
+
+
+.title {
+    font-size: 65px;
+    font-family: "Syncopate", sans-serif;
+    font-weight: bold;
+}
+
+.title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.title .name p {
+    left: 10px;
+    top: 0px;
+}
+
+.title .name p:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(0, 255, 81)) drop-shadow(0 0 30px rgb(0, 255, 81));
+}
+
+.work {
+    font-family: "Bruno Ace", sans-serif;
+    font-size: 55px;
+    font-weight: 200px !important;
+    align-items: center;
+    color: white;
+}
+
+.work a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+.work .text1 .maintext1 p {
+    margin-left: 200px; 
+    display: inline-block; /* 텍스트를 블록 요소로 변경하여 크기 조절 가능하도록 설정 */
+    color: rgb(255, 255, 255);
+    text-shadow: 
+    -1px -1px 0 #000000,  
+     1px -1px 0 #000000,
+    -1px  1px 0 #000000,
+     2px  2px 0 #000000;
+}
+
+.work .text1 .introtext1 p {
+    font-family: "Tomorrow", sans-serif;
+    margin-left: 200px; 
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+
+.work .text1 .inhalt1 p {
+    font-family: "Tomorrow", sans-serif;
+    margin-left: 200px; 
+    margin-right: 200px;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    letter-spacing: -1px;
+}
+
+.work .video iframe {
+    width: 100%; /* 동영상의 가로 너비를 부모 요소의 100%로 설정하여 자동으로 조정 */
+    height: auto; /* 동영상의 높이를 자동으로 조정하여 비율 유지 */
+    max-width: 100%; 
+}
+
+.carousel-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 150px;
+    margin-bottom: 150px;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-item {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .title {
+        font-size: 33px; /* 모바일 화면에서 제목 폰트 크기 줄이기 */
+    }
+
+    .work {
+        font-size: 30px; /* 모바일 화면에서 작업 폰트 크기 줄이기 */
+    }
+
+    .work .text1 .maintext1 p {
+        margin-left: 20px; 
+        margin-right: 10px;
+        font-size: 50px;
+    }
+
+    .work .text1 .introtext1 p,
+    .work .text1 .inhalt1 p {
+        margin-left: 20px; /* 모바일 화면에서 글자 왼쪽 여백 줄이기 */
+        margin-right: 20px; /* 모바일 화면에서 글자 오른쪽 여백 줄이기 */
+        font-size: 20px; /* 모바일 화면에서 글자 크기 줄이기 */
+    }
+
+    .carousel-container {
+        margin-top: 50px; /* 모바일 화면에서 슬라이드 위쪽 여백 줄이기 */
+        margin-bottom: 50px; /* 모바일 화면에서 슬라이드 아래쪽 여백 줄이기 */
+    }
+}
+
+.footer {
+    position: fixed; /* absolute 대신 fixed로 변경 */
+    bottom: 0;
+    left: 0; /* 50%에서 0으로 변경 */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999; /* 다른 요소보다 위에 표시되도록 z-index 설정 */
+}
+
+.footer .copyright {
+    margin-top: 10px; /* copyright와의 간격 조절 */
+}
+
+.footer .copyright a {
+    text-decoration: none !important;
+    font-family: "Tomorrow", sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+}
+
+.footer .copyright p {
+    margin: 0;
+}
+
+/* Webkit 스크롤바 스타일링 (Chrome, Safari 등) */
+::-webkit-scrollbar {
+    width: 3px; /* 스크롤바 너비 */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: 01fdb5; /* 스크롤바 배경색 */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #01fdb5; /* 스크롤바 색상 */
+    border-radius: 1px; /* 스크롤바 모서리의 반경 */
+  }
