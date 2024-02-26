@@ -190,7 +190,7 @@ canvas {
  }
 
  .footer .copyright {
-    margin-top: 10px; /* copyright와의 간격 조절 */
+    margin-top: 6px; /* copyright와의 간격 조절 */
 }
 
 .footer .copyright a {
@@ -262,7 +262,7 @@ img {
         right: 5px;
 }
 
-    .footer .copyright p{
-        font-size:5px;
+    .footer .copyright p {
+        font-size: 5px;
     }
 }
