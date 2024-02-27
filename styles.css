@@ -108,14 +108,14 @@ canvas {
     width: 45%; /* 요소 너비 지정 */
 }
 
-.text1 { order: 2; } 
-.text2 { order: 5; }
-.text3 { order: 1; }
-.text4 { order: 8; }
+.text1 { order: 1; } 
+.text2 { order: 2; }
+.text3 { order: 3; }
+.text4 { order: 6; }
 .text5 { order: 4; }
-.text6 { order: 9; }
-.text7 { order: 3; }
-.text8 { order: 6; }
+.text6 { order: 5; }
+.text7 { order: 8; }
+.text8 { order: 9; }
 .text9 { order: 7; }
 
 .text1 { transform: rotate(5deg); }
