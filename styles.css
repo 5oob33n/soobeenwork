@@ -357,10 +357,9 @@ img {
     .popup .content {
         width: 90%; /* 모바일 화면에 맞게 조정 */
         max-width: 90%;
-        height: auto;
-        max-height: 90vh; 
-        overflow-y: scroll; /* 최대 폭 설정 */
-        padding: 18px; /* 팝업 내부 여백 축소 */
+        max-height: 70vh; /* 모바일 화면에 맞게 조정 */
+        overflow-y: auto; /* 필요할 때만 스크롤바 표시 */
+        padding: 17px; /* 팝업 내부 여백 축소 */
         line-height: 22px !important;
     }
 
