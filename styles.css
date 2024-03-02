@@ -171,7 +171,7 @@ button {
     border: none;
     filter: drop-shadow(0 0 5px rgb(255, 0, 153)) drop-shadow(0 0 30px rgb(0, 8, 255));
     padding: 10px 20px;
-    z-index: 999;
+    z-index: 999 !important;
 }
 
 
@@ -346,6 +346,10 @@ img {
         font-size: 18px;
         margin-left: 20px !important;
         margin-right: 20px !important;
+    }
+
+    .popup .content {
+    width: 80%;
     }
 
     button {
