@@ -348,8 +348,17 @@ img {
         margin-right: 20px !important;
     }
 
-    .popup .content {
-    width: 80%;
+    .popup .content  {
+        height: 65%;
+        width: 80%; 
+    }
+
+   .popup p1 {
+        font-size: 9px;
+    }
+    
+    .popup p2 {
+        font-size: 7px;
     }
 
     button {
