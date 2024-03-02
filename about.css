@@ -130,11 +130,16 @@ canvas {
     }
 
     .work .text1 .introtext1 p,
-    .work .text1 .inhalt1 p, 
-    .work .text1 .mycv p {
+    .work .text1 .inhalt1 p  {
         margin-left: 20px; /* 모바일 화면에서 글자 왼쪽 여백 줄이기 */
         margin-right: 20px; /* 모바일 화면에서 글자 오른쪽 여백 줄이기 */
         font-size: 20px; /* 모바일 화면에서 글자 크기 줄이기 */
+    }
+
+    .work .text1 .mycv p {
+        margin-left: 20px; /* 모바일 화면에서 글자 왼쪽 여백 줄이기 */
+        margin-right: 20px; /* 모바일 화면에서 글자 오른쪽 여백 줄이기 */
+        font-size: 13px; /* 모바일 화면에서 글자 크기 줄이기 */
     }
 
     .carousel-container {
