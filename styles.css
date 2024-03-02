@@ -347,11 +347,33 @@ img {
         margin-right: 20px !important;
     }
 
+    .popup .content  {
+        height: 65%;
+        width: 80%; 
+    }
+
+    button {
+        bottom: 7px;
+        font-size: 25px;
+    }
+
+    .popup h1 {
+        font-size: 13px; 
+    }
+    
+    .popup p1 {
+        font-size: 9px;
+        line-height: 0.3;
+    }
+    
+    .popup p2 {
+        line-height: 0.3;
+        font-size: 7px;
+    }
 
 
     .footer .insta p {
-        font-size: 25px;
-        right: 5px;
+        font-size: 22px;
 }
 
     .footer .copyright p{
