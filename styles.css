@@ -361,6 +361,7 @@ img {
         overflow-y: auto; /* 필요할 때만 스크롤바 표시 */
         padding: 17px; /* 팝업 내부 여백 축소 */
         line-height: 22px !important;
+        margin-bottom: 20px !important;
     }
 
     .popup .content::-webkit-scrollbar {
