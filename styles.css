@@ -359,7 +359,7 @@ img {
         max-width: 90%;
         height: auto;
         max-height: 90vh; 
-        overflow-y: auto; /* 최대 폭 설정 */
+        overflow-y: scroll; /* 최대 폭 설정 */
         padding: 18px; /* 팝업 내부 여백 축소 */
         line-height: 22px !important;
     }
