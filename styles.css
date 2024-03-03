@@ -161,6 +161,11 @@ canvas {
     display: none;
   }
 
+.menu {
+    display: none;
+  }
+
+
 button {
     background-color: transparent;
     position: fixed;
