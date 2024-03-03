@@ -3,7 +3,12 @@ function togglePopup() {
     popup.classList.toggle("active");
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+  
+  var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+// 모바일 디바이스인 경우에만 실행
+if (isMobile) {
+  document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');
   
@@ -12,4 +17,4 @@ document.addEventListener('DOMContentLoaded', function() {
       menuIcon.classList.toggle('active');
     });
   });
-  
+}
