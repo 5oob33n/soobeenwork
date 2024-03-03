@@ -201,6 +201,7 @@ button:focus {
     z-index:2;
     padding: 30px;
     box-sizing: border-box;  
+    overflow-y: auto;
 }
 
 .popup .close-btn {
