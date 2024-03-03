@@ -157,6 +157,10 @@ canvas {
     filter: drop-shadow(0 0 5px rgb(0, 255, 136)) drop-shadow(0 0 30px rgb(0, 255, 136));
 }
 
+.menu-icon {
+    display: none;
+  }
+
 button {
     background-color: transparent;
     position: fixed;
@@ -345,9 +349,77 @@ img {
         position: relative !important;
         font-size: 18px;
         margin-left: 20px !important;
-        margin-right: 10px !important;
+        margin-right: 20px !important;
     }
 
+    .menu-icon {
+        display: block; 
+      }
+      
+
+      .work {
+        display: none;
+      }
+      
+    /* 햄버거 아이콘 스타일 */
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 20px; /* 예시로 위쪽에 고정 */
+    right: 20px; /* 오른쪽에 고정 */
+    z-index: 999; /* 다른 요소보다 위에 표시 */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 174)) drop-shadow(0 0 30px rgb(255, 0, 174));
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  /* 햄버거 아이콘 활성화(메뉴 펼쳐짐) 시 스타일 */
+  .menu-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* 햄버거 메뉴 스타일 */
+  .menu {
+    display: none; /* 초기에는 숨김 */
+    position: fixed;
+    bottom: 120px; /* 아래쪽에 고정 */
+    right: 20px; /* 오른쪽에 고정 */
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 4px rgb(140, 255, 0)) drop-shadow(0 0 20px rgb(140, 255, 0));
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 999; /* 다른 요소보다 약간 아래에 표시 */
+  }
+  
+  .menu a {
+    display: block;
+    color: #ffffff;
+    font-family: "Tomorrow", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 햄버거 메뉴 활성화(클릭 시) 스타일 */
+  .menu.active {
+    display: block;
+  }
+  
 
     button {
         bottom: 7px;
@@ -359,10 +431,488 @@ img {
         max-width: 90%;
         max-height: 70vh; /* 모바일 화면에 맞게 조정 */
         overflow-y: auto; /* 필요할 때만 스크롤바 표시 */
-        padding: 17px; /* 팝업 내부 여백 축소 */
+        padding: 18px; /* 팝업 내부 여백 축소 */
         line-height: 22px !important;
-        margin-bottom: 20px !important;
+        margin-bottom: 20px !important; /* 하단 마진 추가 */
     }
+    
+
+    .popup .content::-webkit-scrollbar {
+        width: 4px; /* 스크롤바 너비 */
+        background-color: transparent; /* 스크롤바 배경색 */
+    }
+    
+    .popup .content::-webkit-scrollbar-thumb {
+        background-color: #ffc6e8; 
+        border-radius: 7px; 
+    }
+
+    .popup .close-btn {
+        right: 10px;
+        top: 10px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .popup h1 {
+        font-size: 16px;
+    }
+
+    .popup p {
+        font-size: 12px !important;
+    }
+
+    .popup p2 {
+        font-size: 11px;
+    }
+
+
+    .footer .insta p {
+        font-size: 22px;
+}
+
+    .footer .copyright p{
+        font-size:7px;
+    }
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-image: url('bg.jpg');
+    background-size: cover; /* 추가: 배경 이미지를 창 사이즈에 맞게 확대 또는 축소 */
+    background-repeat: no-repeat; /* 배경 이미지 반복 방지 */
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    min-height: 100vh; /* body의 최소 높이를 화면의 높이와 같게 설정 */
+}
+
+canvas {
+    display: block;
+  }
+
+#name {
+    position: absolute;
+    font-family: "Syncopate", sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: 50px;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 15vh;
+    overflow: hidden;
+}
+
+.scroll {
+    white-space: nowrap;
+    margin: 0 2em; 
+}
+
+.scroll div {
+    display: flex;
+    gap: 2em;   
+}
+
+.scroll p {
+    font-family: "Syncopate", sans-serif;
+    font-size: 60px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.RightToLeft {
+    animation: RightToLeft 10s infinite linear;
+}
+
+@keyframes RightToLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.work {
+    font-family: "Montserrat", sans-serif;
+    font-size: 30px;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    color: white;
+    position: relative;
+    display: flex; /* Flexbox 사용 */
+    flex-wrap: wrap; /* 요소들을 여러 줄에 걸쳐 배치 */
+    justify-content: center; /* 요소들을 수평으로 중앙 정렬 */
+}
+
+.work a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.work div {
+    font-family: "Syncopate", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center; /* 텍스트 가운데 정렬 */
+    cursor: pointer;
+    flex: 1 0 45%; /* 요소 너비 지정 */
+    margin: 10px; /* 요소 사이의 간격 조정 */
+}
+
+.work .text1,
+.work .text2,
+.work .text3,
+.work .text4,
+.work .text5,
+.work .text6,
+.work .text7,
+.work .text8,
+.work .text9 {
+    font-weight: bold;
+    margin-top: 120px;
+    margin-bottom: 50px; /* 각 요소 사이 여백 추가 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    width: 45%; /* 요소 너비 지정 */
+}
+
+.text1 { order: 1; } 
+.text2 { order: 2; }
+.text3 { order: 3; }
+.text4 { order: 6; }
+.text5 { order: 4; }
+.text6 { order: 5; }
+.text7 { order: 8; }
+.text8 { order: 9; }
+.text9 { order: 7; }
+
+.text1 { transform: rotate(5deg); }
+.text2 { transform: rotate(-5deg); }
+.text3 { transform: rotate(10deg); }
+.text4 { transform: rotate(-10deg); }
+.text5 { transform: rotate(15deg); }
+.text6 { transform: rotate(-15deg); }
+.text7 { transform: rotate(20deg); }
+.text8 { transform: rotate(-20deg); }
+.text9 { transform: rotate(25deg); }
+
+.text1,
+.text3,
+.text5,
+.text7,
+.text9 {
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(0, 21, 255)) drop-shadow(0 0 30px rgb(0, 21, 255));
+}
+
+.text2,
+.text4,
+.text6,
+.text8 {
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(0, 255, 140)) drop-shadow(0 0 30px rgb(0, 255, 140));
+}
+
+.text3 {
+    filter: drop-shadow(0 0 5px rgb(255, 0, 153)) drop-shadow(0 0 30px rgb(255, 0, 153));
+}
+
+.text4 {
+    filter: drop-shadow(0 0 5px rgb(60, 0, 255)) drop-shadow(0 0 30px rgb(60, 0, 255));
+}
+
+.text9 {
+    filter: drop-shadow(0 0 5px rgb(0, 255, 136)) drop-shadow(0 0 30px rgb(0, 255, 136));
+}
+
+.menu-icon {
+    display: none;
+  }
+
+button {
+    background-color: transparent;
+    position: fixed;
+    z-index: 999;
+    bottom: 30px;
+    right: 10px; 
+    font-family: "Tomorrow", sans-serif;
+    font-size: 35px;
+    font-style: italic;
+    transform: rotate(-5deg);
+    cursor: pointer;
+    color: white;
+    border: none;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 153)) drop-shadow(0 0 30px rgb(0, 8, 255));
+    padding: 10px 20px;
+}
+
+
+button:focus {
+    outline: none; 
+}
+
+.popup .overlay{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width: 0vw;
+    height: 50vh;
+    background: transparent;
+    z-index:1;
+    display: none;
+}
+
+.popup .content {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: rgb(255, 255, 255);
+    width: 450px;
+    height: 750px;
+    z-index:2;
+    padding: 30px;
+    box-sizing: border-box;  
+    overflow-y: auto;
+}
+
+.popup .close-btn {
+    cursor: pointer;
+    position:absolute;
+    right:20px;
+    top:20px;
+    width:30px;
+    height:30px;
+    font-size: 25px;
+    color: rgb(255, 0, 153);
+    filter: drop-shadow(0 0 5px rgb(255, 0, 174)) drop-shadow(0 0 30px rgb(255, 0, 174));
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.popup.active .overlay {
+    display: block;
+}
+
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h1 {
+    font-family: "Syncopate", sans-serif;
+    color: white;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 174)) drop-shadow(0 0 30px rgb(255, 0, 174));
+}
+
+.popup p1 {
+    font-family: "Tomorrow", sans-serif;
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+
+.popup p2 {
+    font-family: "Tomorrow", sans-serif;
+    font-size: 15px;
+    color: white;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 174)) drop-shadow(0 0 30px rgb(255, 0, 174));
+}
+
+
+
+  .footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999; /* 다른 요소보다 위에 표시되도록 z-index 설정 */
+}
+
+
+
+ .footer .insta a{
+    text-decoration: none;
+
+ }
+
+ .footer .insta p {
+    position: fixed;
+    bottom: 3px;
+    left: 10px;
+    font-family: "Tomorrow", sans-serif;
+    font-style: italic; 
+    transform: rotate(5deg);
+    font-size: 35px;
+    color: white;
+    filter: drop-shadow(0 0 5px rgb(17, 0, 255)) drop-shadow(0 0 30px rgb(0, 8, 255));
+ }
+
+
+ .footer .copyright {
+    margin-top: 8px; /* copyright와의 간격 조절 */
+}
+
+.footer .copyright a {
+    text-decoration: none;
+    font-family: "Tomorrow", sans-serif;
+    font-size: 16px;
+    color: rgb(0, 21, 255);
+}
+
+.footer .copyright p {
+    margin: 0;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px; 
+    margin-top: -150px; /* Half the height */
+    margin-left: -150px; /* Half the width */
+    cursor: pointer;
+    filter: drop-shadow(0 0 5px rgb(178, 255, 230)) drop-shadow(0 0 30px rgb(178, 255, 230));
+}
+
+
+/* Webkit 스크롤바 스타일링 (Chrome, Safari 등) */
+::-webkit-scrollbar {
+    width: 7px; /* 스크롤바 너비 */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: 01fdb5; /* 스크롤바 배경색 */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #01fdb5; /* 스크롤바 색상 */
+    border-radius: 1px; /* 스크롤바 모서리의 반경 */
+  }
+
+
+/* 미디어 쿼리 추가 */
+@media only screen and (max-width: 768px) {
+    .title .scroll .RightToLeft p {
+        font-size: 35px !important; /* 모바일 화면에서 제목 폰트 크기 줄이기 */
+    }
+
+    .work .text1 p,
+    .work .text2 p,
+    .work .text3 p,
+    .work .text4 p,
+    .work .text5 p,
+    .work .text6 p,
+    .work .text7 p,
+    .work .text8 p,
+    .work .text9 p {
+        position: relative !important;
+        font-size: 18px;
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+
+    .menu-icon {
+        display: block; 
+      }
+      
+
+      .work {
+        display: none;
+      }
+      
+    /* 햄버거 아이콘 스타일 */
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 20px; /* 예시로 위쪽에 고정 */
+    right: 20px; /* 오른쪽에 고정 */
+    z-index: 999; /* 다른 요소보다 위에 표시 */
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    filter: drop-shadow(0 0 5px rgb(255, 0, 174)) drop-shadow(0 0 30px rgb(255, 0, 174));
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  /* 햄버거 아이콘 활성화(메뉴 펼쳐짐) 시 스타일 */
+  .menu-icon.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-icon.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  /* 햄버거 메뉴 스타일 */
+  .menu {
+    display: none; /* 초기에는 숨김 */
+    position: fixed;
+    bottom: 120px; /* 아래쪽에 고정 */
+    right: 20px; /* 오른쪽에 고정 */
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0 0 4px rgb(140, 255, 0)) drop-shadow(0 0 20px rgb(140, 255, 0));
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 999; /* 다른 요소보다 약간 아래에 표시 */
+  }
+  
+  .menu a {
+    display: block;
+    color: #ffffff;
+    font-family: "Tomorrow", sans-serif;
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 햄버거 메뉴 활성화(클릭 시) 스타일 */
+  .menu.active {
+    display: block;
+  }
+  
+
+    button {
+        bottom: 7px;
+        font-size: 25px;
+    }
+
+    .popup .content {
+        width: 90%; /* 모바일 화면에 맞게 조정 */
+        max-width: 90%;
+        max-height: 70vh; /* 모바일 화면에 맞게 조정 */
+        overflow-y: auto; /* 필요할 때만 스크롤바 표시 */
+        padding: 18px; /* 팝업 내부 여백 축소 */
+        line-height: 22px !important;
+        margin-bottom: 20px !important; /* 하단 마진 추가 */
+    }
+    
 
     .popup .content::-webkit-scrollbar {
         width: 4px; /* 스크롤바 너비 */
