@@ -165,6 +165,9 @@ canvas {
     display: none;
   }
 
+.menu a {
+    display: none;   
+}
 
 button {
     background-color: transparent;
