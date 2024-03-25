@@ -81,7 +81,7 @@ canvas {
     margin-right: 400px;
     color: rgb(0, 0, 255);
     font-size: 15px;
-    letter-spacing: -1.5px; 
+    letter-spacing: 1px; 
 }
 
 .work .video iframe {
