@@ -77,11 +77,11 @@ canvas {
 
 .work .text1 .documentation p{
     font-family: "Tomorrow", sans-serif;
-    margin-left: 300px; 
-    margin-right: 300px;
+    margin-left: 400px; 
+    margin-right: 400px;
     color: rgb(0, 0, 255);
     font-size: 15px;
-    letter-spacing: -1px; 
+    letter-spacing: -1.5px; 
 }
 
 .work .video iframe {
